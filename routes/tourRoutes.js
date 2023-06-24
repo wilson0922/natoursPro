@@ -3,11 +3,7 @@ const tourController = require('./../controllers/tourController')
 
 const router = express.Router()
 
-router.param('id', tourController.checkId)
-
-// Create a checkBody middleware function
-// If body contains the name property and the price property
-// If not, send back 400 (bad request)
+// router.param('id', tourController.checkId)
 
 router
   .route('/')
