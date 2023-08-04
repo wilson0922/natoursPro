@@ -9025,7 +9025,7 @@
   );
   var bookTour = async (tourId) => {
     try {
-      const session = await axios_default(`/bookings/checkout-session/${tourId}`);
+      const session = await axios_default(`/api/v1/bookings/checkout-session/${tourId}`);
       window.location.assign(session.data.session.url);
     } catch (err) {
       console.log(err);
