@@ -9,19 +9,18 @@ html
       link(rel='stylesheet' href='/css/style.css')
       link(rel='shortcut icon' type='/image/png' href='/img/favicon.png')
       title Natours | #{title}
-      
-    
-  body(data-alert=`${alert?alert:''}`)
+
+
+  body(data-alert=`${alert ? alert : ''}`)
     // Header
     include _header
-    
+
     // Content
     block content
       h1 placeholder
-    
+
     // Footer
     include _footer
 
     //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js')
     script(src='/js/bundle.js')
-    
