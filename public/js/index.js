@@ -2,6 +2,7 @@ import { login, logout } from './login'
 import { displayMap } from './mapbox'
 import { updateSettings } from './updateSettings'
 import { bookTour } from './stripe'
+import { showAlert } from './alerts'
 
 window.onbeforeunload = function () {
   window.scrollTo(0, 0)
@@ -64,3 +65,6 @@ if (bookBtn)
     const { tourId } = e.target.dataset
     bookTour(tourId)
   })
+
+const alertMessage = document.querySelector('body').dataset.alert
+if (alert) showAlert('success', alertMessage, 10)
